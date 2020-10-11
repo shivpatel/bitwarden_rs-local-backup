@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  worker:
+    build: .
+    restart: always
+    volumes:
+      - ./db.sqlite3:/db.sqlite3
+      - ./backups:/backups
+      env_file:
+      - .env
