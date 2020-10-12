@@ -17,3 +17,4 @@ BACKUP_ENCRYPTION_KEY=xxx
 ## Decrypting Backups
 1. `docker exec -it CONTAINER_ID /bin/ash`
 2. `openssl enc -d -aes256 -salt -pbkdf2 -pass pass:BACKUP_ENCRYPTION_KEY -in /backups/DESIRED_BACKUP_NAME.tar.gz | tar xz -C /backups`
+3. Grab your `db.sqlite3` file from `/host/path/to/backups/tmp/`
