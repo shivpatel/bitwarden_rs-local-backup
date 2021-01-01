@@ -6,5 +6,5 @@ services:
     volumes:
       - ./db.sqlite3:/db.sqlite3
       - ./backups:/backups
-      env_file:
+    env_file:
       - .env
